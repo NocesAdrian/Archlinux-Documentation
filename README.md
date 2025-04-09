@@ -181,11 +181,14 @@ sda3 → swap → `+6G` (or adjust)
 sda4 → for LVM → press Enter for default
 
 Set Partition Types
+sda3 [SWAP]
 ```sh
 t  # Set type
 3  # sda3
 82 # Linux swap
-
+```
+sda4 [LVM]
+```sh
 t
 4  # sda4
 44 # LVM
