@@ -9,10 +9,10 @@ Follow the steps below to install and configure your Linux system.
 ## Steps
 
 1. [Network Connection Setup](#1-network-connection-setup)
-2. [Set System Time](#5-set-system-time)
-3. [Reformat the Partitions](#3-reformat-the-partitions)
-4. [Mount Partitions (Skip Boot Partition)](#4-mount-partitions-skip-boot-partition)
-5. [Partitioning the Disk](#2-partitioning-the-disk)
+2. [Set System Time](#2-set-system-time)
+3. [Partitioning the Disk](#3-partitioning-the-disk)
+4. [Reformat the Partitions](#4-reformat-the-partitions)
+5. [Mount Partitions (Skip Boot Partition)](#5-mount-partitions-skip-boot-partition)
 6. [Initialize PGP Keyring (For Legacy Devices)](#6-initialize-pgp-keyring-for-legacy-devices)
 7. [Install Base System](#7-install-base-system)
 8. [Generate fstab (Filesystem Table)](#8-generate-fstab-filesystem-table)
@@ -37,17 +37,17 @@ Follow the steps below to install and configure your Linux system.
 ## 1. Network Connection Setup
 Set up the network connection to proceed with downloading necessary packages.
 
-## 2. Partitioning the Disk
+## 2. Set System Time
+Set the system time to your local timezone.
+
+## 3. Partitioning the Disk
 Partition the disk according to your requirements.
 
-## 3. Reformat the Partitions
+## 4. Reformat the Partitions
 Reformat the partitions if necessary.
 
-## 4. Mount Partitions (Skip Boot Partition)
+## 5. Mount Partitions (Skip Boot Partition)
 Mount the partitions, but skip mounting the boot partition for now.
-
-## 5. Set System Time
-Set the system time to your local timezone.
 
 ## 6. Initialize PGP Keyring (For Legacy Devices)
 Initialize the PGP keyring, especially important for older devices.
@@ -108,3 +108,4 @@ Enable the system services required for the system to function.
 
 ## 25. Unmount Partitions and Reboot
 Unmount all partitions and reboot the system to start using it.
+
