@@ -30,7 +30,7 @@ Follow the steps below to install and configure your Linux system.
 20. [Configure GRUB Bootloader (Add Hard Disk)](#20-configure-grub-bootloader-add-hard-disk)
 21. [Mount Boot Partition](#21-mount-boot-partition)
 22. [Install Bootloader](#22-install-bootloader)
-23. [Final Configurations & Tweaks](#23-final-configurations-tweaks)
+23. [Final Configurations & Tweaks](#23-final-configurations--tweaks)
 24. [Enable Necessary System Services](#24-enable-necessary-system-services)
 25. [Unmount Partitions and Reboot](#25-unmount-partitions-and-reboot)
 
