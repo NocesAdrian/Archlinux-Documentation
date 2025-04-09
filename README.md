@@ -25,7 +25,7 @@ Follow the steps below to install and configure your Linux system.
 15. [Allow User Sudo Access](#15-allow-user-sudo-access)
 16. [Install Desktop Environment (Optional)](#16-install-desktop-environment-optional)
 17. [Install Linux Kernel and Drivers](#17-install-linux-kernel-and-drivers)
-18. [Configure /etc/mkinitcpio.conf for Kernel](#18-configure-etc-mkinitcpioconf-for-kernel)
+18. [Configure /etc/mkinitcpio.conf for Kernel](#18-configure-etcmkinitcpioconf-for-kernel)
 19. [Set Locale (Uncomment Country, Run locale-gen)](#19-set-locale-uncomment-country-run-locale-gen)
 20. [Configure GRUB Bootloader (Add Hard Disk)](#20-configure-grub-bootloader-add-hard-disk)
 21. [Mount Boot Partition](#21-mount-boot-partition)
@@ -184,6 +184,8 @@ t  # Set type
 t
 4  # sda4
 44 # LVM
+```
+```sh
 w  # Write and exit
 ```
 
