@@ -9,10 +9,10 @@ Follow the steps below to install and configure your Linux system.
 ## Steps
 
 1. [Network Connection Setup](#1-network-connection-setup)
-2. [Partitioning the Disk](#2-partitioning-the-disk)
+2. [Set System Time](#5-set-system-time)
 3. [Reformat the Partitions](#3-reformat-the-partitions)
 4. [Mount Partitions (Skip Boot Partition)](#4-mount-partitions-skip-boot-partition)
-5. [Set System Time](#5-set-system-time)
+5. [Partitioning the Disk](#2-partitioning-the-disk)
 6. [Initialize PGP Keyring (For Legacy Devices)](#6-initialize-pgp-keyring-for-legacy-devices)
 7. [Install Base System](#7-install-base-system)
 8. [Generate fstab (Filesystem Table)](#8-generate-fstab-filesystem-table)
