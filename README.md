@@ -105,8 +105,134 @@ If you face any issues with the network, you can use the following commands:
 ## 2. Set System Time
 Set the system time to your local timezone.
 
+1. Check the current time:
+
+You can use the following command to check the current system time:
+```sh
+timedatectl
+```
+
+2. Set the correct timezone:
+
+Arch uses timedatectl to manage the system time. First, set your timezone:
+```sh
+timedatectl set-timezone <Your/Timezone>
+```
+Replace <Your/Timezone> with your desired timezone (e.g., `Asia/Manila`).
+
+3. Verify the timezone:
+
+After setting the timezone, you can verify it by running:
+```sh
+timedatectl
+```
+
+4. Synchronize the system clock with NTP (Network Time Protocol):
+
+Ensure that the system clock is synchronized. You can enable the NTP service:
+```sh
+timedatectl set-ntp true
+```
+5. verify:
+```sh
+timedatectl
+```
 ## 3. Partitioning the Disk
 Partition the disk according to your requirements.
+
+### Check Storage Devices
+```sh
+lsblk  # Display storage devices (look for /sda, /nvme, etc.)
+```
+### Delete Existing Partitions (if needed)
+```sh
+parted /dev/sda
+```
+```sh
+print #View partitions
+```
+```sh
+rm 1 #to rm 4 Remove partitions
+```
+```sh
+quit    #to quit parted
+```
+### Create Partitions with fdisk
+```sh
+fdisk /dev/sda
+```
+Inside fdisk:
+
+`p` — Display existing partitions
+
+`n` — Create new partitions:
+
+sda1 → /efi → `+512M`
+
+sda2 → /boot → `+512M`
+
+sda3 → swap → `+6G` (or adjust)
+
+sda4 → for LVM → press Enter for default
+
+Set Partition Types
+```sh
+t  # Set type
+3  # sda3
+82 # Linux swap
+
+t
+4  # sda4
+44 # LVM
+w  # Write and exit
+```
+
+### Encrypt sda4 Before LVM Setup
+```sh
+cryptsetup luksFormat /dev/sda4
+```
+Type `YES`
+
+Set a strong password
+
+Open Encrypted Partition
+```sh
+cryptsetup open --type luks /dev/sda4 lvm
+```
+### Configuring sda4
+```sh
+pvcreate /dev/mapper/lvm
+```
+🔹 *Initializes the encrypted partition as a Physical Volume (PV) that LVM can use.*
+
+---
+
+```sh
+vgcreate volgroup0 /dev/mapper/lvm
+```
+🔹 *Creates a Volume Group (VG) named `volgroup0` using the physical volume.*
+
+---
+
+```sh
+lvcreate -L 30GB volgroup0 -n lv_root
+```
+🔹 *Creates a Logical Volume (LV) called `lv_root` with 30GB size inside `volgroup0` — this will be your root (`/`) filesystem.*
+
+---
+
+```sh
+lvcreate -L 250GB volgroup0 -n lv_home
+```
+🔹 *Creates a Logical Volume for your `/home` directory with 250GB space (adjust size as needed).*
+
+---
+
+## Summary of LVM Roles:
+| Volume      | Purpose     | Example Size |
+|-------------|-------------|--------------|
+| lv_root     | System root | 30GB+        |
+| lv_home     | User files  | 250GB+        |
 
 ## 4. Reformat the Partitions
 Reformat the partitions if necessary.
