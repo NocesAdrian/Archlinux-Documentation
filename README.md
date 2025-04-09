@@ -145,6 +145,11 @@ Partition the disk according to your requirements.
 lsblk  # Display storage devices (look for /sda, /nvme, etc.)
 ```
 ### Delete Existing Partitions (if needed)
+one command Delete all:
+```sh
+sfdisk --delete /dev/sda
+```
+one by one Delete
 ```sh
 parted /dev/sda
 ```
