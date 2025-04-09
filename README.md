@@ -36,6 +36,71 @@ Follow the steps below to install and configure your Linux system.
 
 ## 1. Network Connection Setup
 Set up the network connection to proceed with downloading necessary packages.
+## Connect to Network
+
+To connect to the network, follow these steps:
+
+1. Display available network interfaces:
+    ```sh
+    ip link
+    ```
+
+2. Enter the command line network manager:
+    ```sh
+    iwctl
+    ```
+
+3. Connect to the wireless network (replace `SSID` with your network name):
+    ```sh
+    station wlan0 connect "SSID"
+    ```
+
+4. For Ethernet, the connection is automatic.
+
+## Troubleshooting
+
+If you face any issues with the network, you can use the following commands:
+
+1. See available wireless networks:
+    ```sh
+    iw dev interface scan | grep SSID
+    ```
+
+2. Display the network block status:
+    ```sh
+    rfkill list
+    ```
+
+3. Unblock WiFi if it's blocked by `rfkill`:
+    ```sh
+    rfkill unblock wifi
+    ```
+
+4. Set the network interface up if it's down:
+    ```sh
+    ip link set interface up
+    ```
+
+5. Check the IP address and see if you are connected:
+    ```sh
+    ip addr
+    ```
+
+6. Verify if you are connected to the internet:
+    ```sh
+    ping 8.8.8.8
+    ```
+
+    Or check connectivity by pinging Google:
+    ```sh
+    ping google.com
+    ```
+
+7. Display network interface details, including MAC address and interface status:
+    ```sh
+    ip a
+    ```
+
 
 ## 2. Set System Time
 Set the system time to your local timezone.
