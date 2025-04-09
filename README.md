@@ -50,9 +50,9 @@ To connect to the network, follow these steps:
     iwctl
     ```
 
-3. Connect to the wireless network (replace `SSID` with your network name):
+3. Connect to the wireless network (replace `SSID` with your network name and `interface` to your wireless network interface name):
     ```sh
-    station wlan0 connect "SSID"
+    station interface connect "SSID"
     ```
 
 4. For Ethernet, the connection is automatic.
