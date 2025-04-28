@@ -148,49 +148,85 @@ swapon /dev/volgroup0/lv_swap
 
 ### MOUNT PARTITION
 ```bash
-mount /dev/VG0/lv_root /mnt
+mount /dev/volgroup0/lv_root /mnt
 mkdir -p /mnt/{home,var,tmp, boot/EFI}
 mount /dev/sda2 /mnt/boot
 mount /dev/sda1 /mnt/boot/EFI
-mount /dev/VG0/lv_home /mnt/home
-mount /dev/VG0/lv_var  /mnt/var
-mount /dev/VG0/lv_tmp  /mnt/tmp
+mount /dev/volgroup0/lv_home /mnt/home
+mount /dev/volgroup0/lv_var  /mnt/var
+mount /dev/volgroup0/lv_tmp  /mnt/tmp
 ```
 
 ### INITIALIZED KEYRING
+```bash
 pacman-key --init
 pacman-key --populate archlinux
 pacman -Sy archlinux-keyring
+```
 
-INSTALL CORE SYSTEM
+### INSTALL CORE SYSTEM
+```bash
 pacstrap -i /mnt base
+```
 
-GENERATE FILESYSTEM TABLE
+### GENERATE FILESYSTEM TABLE
+```bash
+// generate
 genfstab -U -p /mnt >> /mnt/etc/fstab
-Check -> cat /mnt/etc/fstab
-Remove if mistake -> rm -rf /mnt/etc/fstab
+// Check
+cat /mnt/etc/fstab
+// Remove if mistake 
+rm -rf /mnt/etc/fstab
+```
 
-ENTER CHROOT AND SETUP ROOT PASSWD AND USER
+### ENTER CHROOT AND SETUP ROOT PASSWD AND USER
+```bash
+// Enter chroot
 arch-chroot /mnt
-passwd -> change root password
-useradd -m -g users -G wheel adrian
-passwd adrian -> change user password 
-sudo pkill -u username -> terminate user
-sudo userdel -r username -> delete user
+// change root password
+passwd
+// add normal user
+useradd -m -g users adrian
+// add admin user
+useradd -m -g users -G sudo admin
+// change user password 
+passwd adrian
+// change admin paddwd
+passwd admin
+```
+### troubleshooting
+```bash
+// terminate user running process
+sudo pkill -u adrian
+// delete user
+sudo userdel -r adrian -> 
+```
 
-TOOLS INSTALLATION
-pacman -S base-devel dosfstools grub efibootmgr lvm2  gdisk arch-install-scripts
-MORE
+### TOOLS INSTALLATION
+```bash
+pacman -S base-devel dosfstools grub efibootmgr lvm2 gdisk bluez bluez-utils
+```
+### MORE
+```bash
 pacman -S mtools nano vim neovim git curl openssh os-prober sudo procps-ng fastfetch
-MUST HAVE
-pacman -S alacritty dhcpcd thunar firefox  iwd networkmanager unzip wireless_tools iw qbittorrent
+```
+### MUST HAVE
+```bash
+pacman -S alacritty dhcpcd thunar firefox iwd networkmanager unzip wireless_tools iw qbittorrent
+```
 
-LINUX INSTALLATION
+### LINUX INSTALLATION
+```bash
 pacman -S linux linux-lts linux-headers linux-lts-headers linux-firmware
+```
 
-DESKTOP ENVIRONMENT INSTALLATION
-CORE -> pacman -S xorg xorg-xinit
+### DESKTOP ENVIRONMENT INSTALLATION
+```bash
+// CORE
+pacman -S xorg xorg-xinit
+```
 
+```bash
 GNOME
 pacman -S gnome gnome-tweaks gdm
 systemctl enable gdm
@@ -210,7 +246,6 @@ systemctl enable lightdm
 MATE
 pacman -S mate mate-control-center lightdm lightdm-gtk-greeter
 systemctl enable lightdm
-
 
 LXQT
 pacman -S lxqt lxqt-qt5 qterminal lightdm lightdm-gtk-greeter
@@ -235,25 +270,34 @@ systemctl enable lightdm
 ENLIGHTENMENT 
 pacman -S enlightenment terminology lightdm lightdm-gtk-greeter
 systemctl enable lightdm
+```
 
-i3 + feh + wal + picom + rofi(optional) 
+### i3 + feh + wal + picom + rofi(optional) 
+```bash
 pacman -S i3  i3status i3blocks dmenu feh wal rofi picom
 nano ~/.xinitrc
+
 "
 #!/bin/sh
 feh --bg-scale ~/Pictures/wall.jpg &  # Set wallpaper
 wal -i ~/Pictures/wall.jpg &          # Apply wal theme
 picom --config ~/.config/picom/picom.conf &  # Start picom (custom config if you want)
 exec i3  # Start i3
-" 
+"
+
 chmod +x ~/.xinitrc
-Start X manually
+// Start X manually
 Just type:
 startx
+```
 
 INSTALL DRIVERS
-lspci -> look for VGA and 3D controller
+```bash
+// look for VGA and 3D controller
+lspci
+```
 
+```bash
 INTEL
 pacman -S xf86-video-intel mesa intel-media-driver
 
@@ -263,38 +307,51 @@ pacman -S xf86-video-ati -> older
 
 NVIDIA
 pacman -S nvidia nvidia-lts nvidia-utils nvidia-settings mesa
+```
 
-FINISHING (skip "encrypt" if unencrypted setup just put "lvm2") 
+### FINISHING 
+don't write "encrypt" if unencrypted setup just put "lvm2" 
+```bash
 nano /etc/mkinitcpio.conf
-Find HOOKS and append to the text block this two -> encrypt lvm2 
+// Find HOOKS and append to the text block this two -> encrypt lvm2 
 mkinitcpio -p linux
 mkinitcpio -p linux-lts
+```
 
+### Generate locale
+```bash
 nano /etc/locale.gen
 Uncomment #en_ph utf 8
 locale-gen
+```
 
+### configure /etc/sudoers file
+```bash
+groupadd sudo
 nano /etc/sudoers
-Uncomment #%wheel 
+Uncomment #%sudo
+```
 
+### make grub know your encrypted device
+```bash
 //skip this if unencrypted setup
 nano /etc/default/grub
 find GRUB_CMDLINE_LINUX_DEFAULT
-append befor "quiet" -> cryptdevice=/dev/sda3:volgroup0
+append before "quiet" -> cryptdevice=/dev/sda3:volgroup0
+```
 
-
-LAST MOUNT
-mkdir /boot/EFI
-mount /dev/sda1 /boot/EFI
-
-BOOTLOADER FINAL TOUCH
+### BOOTLOADER FINAL TOUCH
+```bash
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
 
 cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
 grub-mkconfig -o /boot/grub/grub.cfg
+```
 
-systemctl enable NetworkManager iwd dhcpcd
-
+### finals
+```bash
+systemctl enable NetworkManager iwd dhcpcd bluetooth bluetooth.service
 exit
 umount -a
 reboot
+```
