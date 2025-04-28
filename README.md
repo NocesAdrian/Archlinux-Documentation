@@ -134,7 +134,8 @@ vgchange -ay
 |||				/var |		+15GB |		ext4 |
 |||				/tmp |	+5GB |		ext4 |
 
-REFORMAT PARTITION
+### REFORMAT PARTITION
+```bash
 mkfs.vfat -F 32 /dev/sda1
 mkfs.ext4 /dev/sda2
 mkfs.ext4 /dev/volgroup0/lv_root
@@ -143,14 +144,18 @@ mkfs.ext4 /dev/volgroup0/lv_var
 mkfs.ext4 /dev/volgroup0/lv_tmp
 mkswap /dev/volgroup0/lv_swap
 swapon /dev/volgroup0/lv_swap
+```
 
-MOUNT PARTITION 
+### MOUNT PARTITION
+```bash
 mount /dev/VG0/lv_root /mnt
-mkdir /mnt/{boot, home,var,tmp}
+mkdir -p /mnt/{home,var,tmp, boot/EFI}
 mount /dev/sda2 /mnt/boot
+mount /dev/sda1 /mnt/boot/EFI
 mount /dev/VG0/lv_home /mnt/home
 mount /dev/VG0/lv_var  /mnt/var
 mount /dev/VG0/lv_tmp  /mnt/tmp
+```
 
 INITIALIZED KEYRING
 pacman-key --init
