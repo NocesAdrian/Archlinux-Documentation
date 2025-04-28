@@ -188,10 +188,11 @@ passwd
 // add normal user
 useradd -m -g users adrian
 // add admin user
+groupadd sudo
 useradd -m -g users -G sudo admin
 // change user password 
 passwd adrian
-// change admin paddwd
+// change admin passwd
 passwd admin
 ```
 ### troubleshooting
@@ -327,7 +328,6 @@ locale-gen
 
 ### configure /etc/sudoers file
 ```bash
-groupadd sudo
 nano /etc/sudoers
 Uncomment #%sudo
 ```
