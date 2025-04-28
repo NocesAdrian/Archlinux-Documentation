@@ -116,7 +116,7 @@ vgchange -ay
 ```
 
 ### FILESYSTEM STRUCTURE
-| partition | mount | size | fotmat |
+| partition | mount | size | format |
 |------|------|------|--------|
 | sda1 | /boot | +512M |	vfat32 |
 
@@ -157,7 +157,7 @@ mount /dev/VG0/lv_var  /mnt/var
 mount /dev/VG0/lv_tmp  /mnt/tmp
 ```
 
-INITIALIZED KEYRING
+### INITIALIZED KEYRING
 pacman-key --init
 pacman-key --populate archlinux
 pacman -Sy archlinux-keyring
