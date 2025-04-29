@@ -4,7 +4,7 @@
 ## 📌 Quick Navigation
 - [Connecting to Internet](#network-and-time-config)
 - [Disk Partition](#disk-partition)
-- [Encrypted Setup Guide](#encrypted-setup)
+- [Encrypted Setup Guide](#encrypt-partition-luks-format)
 - [Reformatting](#reformat-partition)
 - [Mounting Filesystem](#mount-partition)
 - [System Install](#initialized-keyring)
@@ -65,7 +65,7 @@ fdisk /dev/sda
 | sda2     | +512M |
 | sda3     | 100%GB or just press Enter | 
 
-### CREATE’S FILESYSTEM LVM STRUCTURE
+### Encrypt partition luks format
 ```bash
 // ENCRYPT /dev/sda3
 cryptsetup luksFormat /dev/sda3
