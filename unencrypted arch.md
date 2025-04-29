@@ -299,7 +299,6 @@ pacman -S nvidia nvidia-lts nvidia-utils nvidia-settings mesa
 ```
 
 ### FINISHING 
-don't write "encrypt" if unencrypted setup just put "lvm2" 
 ```bash
 nano /etc/mkinitcpio.conf
 // Find HOOKS and append to the text "block" this -> lvm2 
