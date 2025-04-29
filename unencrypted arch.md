@@ -65,7 +65,7 @@ fdisk /dev/sda
 | sda2     | +512M |
 | sda3     | 100%GB or just press Enter | 
 
-### UNENCRYPTED LVM
+### UNENCRYPTED SETUP
 ```bash
 // physical volume
 pvcreate /dev/sda3
