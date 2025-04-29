@@ -10,6 +10,7 @@
 - [System Install](#initialized-keyring)
 - [Generate Filesystem Table](#generate-filesystem-table)
 - [User Creation](#enter-chroot-and-setup-root-passwd-and-user)
+- [Install Linux](#tools-installation)
 - [Desktop Environment](#desktop-environment-installation)
 - [Drivers](#install-drivers)
 - [Finishing Touch](#finishing)
@@ -308,7 +309,7 @@ pacman -S nvidia nvidia-lts nvidia-utils nvidia-settings mesa
 ### FINISHING 
 ```bash
 nano /etc/mkinitcpio.conf
-// Find HOOKS and append to the text block this two -> encrypt lvm2 
+// Find HOOKS and append to the text "block" this two -> encrypt lvm2 
 mkinitcpio -p linux
 mkinitcpio -p linux-lts
 ```
