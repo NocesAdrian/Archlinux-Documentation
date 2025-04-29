@@ -6,7 +6,7 @@
 - [Disk Partition](#disk-partition)
 - [Encrypted Setup Guide](#encrypted-setup)
 - [Reformatting](#reformat-partition)
-- [Mounting & Filesystem](#mount-partition)
+- [Mounting Filesystem](#mount-partition)
 - [System Install](#initialized-keyring)
 - [Generate Filesystem Table](#generate-filesystem-table)
 - [User Creation](#enter-chroot-and-setup-root-passwd-and-user)
