@@ -9,6 +9,19 @@ This is a step-by-step guide to installing Arch Linux with options for both encr
 - [Encrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/encrypted%20arch.md)
 - [Unencrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/unencrypted%20arch.md)
 
+## pacman and yay flags
+```txt
+-S    --install
+-Ss   --Search pkg
+-Qs   --search installed pakage
+-Sy   --sync db
+-Syu  --system fill upgrade
+-Rns  --wipe clean
+-Rs   --remove and clean pakage
+-R    --remove pakage
+-Sc   --remove old unused cache
+```
+
 ## Enable `yay`
 ```bash
 sudo pacman -S --needed base-devel git
