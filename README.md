@@ -16,3 +16,11 @@ sudo git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 ```
+
+## Unable to connect to network after booting installed arch
+```bash
+wpa_passphrase "SSID" "PASSWD" > /etc/wpa_supplicant/wpa.conf
+wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa.conf
+dhcpcdc wlan0
+sudo systemctl enable dhcpcd@wlan0.service
+```
