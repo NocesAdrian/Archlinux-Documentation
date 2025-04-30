@@ -9,7 +9,7 @@ This is a step-by-step guide to installing Arch Linux with options for both encr
 - [Encrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/encrypted%20arch.md)
 - [Unencrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/unencrypted%20arch.md)
 
-## Enable yay
+## Enable `yay`
 ```bash
 sudo pacman -S --needed base-devel git
 sudo git clone https://aur.archlinux.org/yay.git
