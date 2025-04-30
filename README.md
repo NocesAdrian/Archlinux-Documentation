@@ -9,18 +9,6 @@ This is a step-by-step guide to installing Arch Linux with options for both encr
 - [Encrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/encrypted%20arch.md)
 - [Unencrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/unencrypted%20arch.md)
 
-
-## Flash iso file using `dd`
-```txt
-sudo dd if=your.iso of=/dev/sdX bs=4M status=progress conv=fsync
-
--if  --your iso file
--of  --your storage device e.g. USB flashdrive
--bs  --block size
--status=progress    --print status in progress
--conv=fsync         --makes sure everything is written right in the usb
-```
-
 ## pacman and yay flags
 ```txt
 -S    --install
@@ -49,3 +37,15 @@ wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa.conf
 dhcpcdc wlan0
 sudo systemctl enable dhcpcd@wlan0.service
 ```
+
+## Flash iso file using `dd`
+```txt
+sudo dd if=your.iso of=/dev/sdX bs=4M status=progress conv=fsync
+
+-if  --your iso file
+-of  --your storage device e.g. USB flashdrive
+-bs  --block size
+-status=progress    --print status in progress
+-conv=fsync         --makes sure everything is written right in the usb
+```
+
