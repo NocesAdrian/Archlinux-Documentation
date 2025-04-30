@@ -18,7 +18,7 @@ sudo dd if=your.iso of=/dev/sdX bs=4M status=progress conv=fsync
 -of  --your storage device e.g. USB flashdrive
 -bs  --block size
 -status=progress    --print status in progress
--conv=fsync  --makes sure everything is written right in the usb
+-conv=fsync         --makes sure everything is written right in the usb
 ```
 
 ## pacman and yay flags
