@@ -137,12 +137,16 @@ swapon /dev/volgroup0/lv_swap
 ### MOUNT PARTITION
 ```bash
 mount /dev/volgroup0/lv_root /mnt
-mkdir -p /mnt/{home,var,tmp, boot/EFI}
+
+mkdir /mnt/home
+mkdir /mnt/var
+mkdir /mnt/var/tmp
+mkdir /mnt/boot
+
 mount /dev/sda2 /mnt/boot
-mount /dev/sda1 /mnt/boot/EFI
 mount /dev/volgroup0/lv_home /mnt/home
 mount /dev/volgroup0/lv_var  /mnt/var
-mount /dev/volgroup0/lv_tmp  /mnt/tmp
+mount /dev/volgroup0/lv_tmp  /mnt/var/tmp
 ```
 
 ### INITIALIZED KEYRING
@@ -322,6 +326,8 @@ Uncomment #%sudo
 
 ### BOOTLOADER FINAL TOUCH
 ```bash
+mkdir /boot/EFI
+mount /dev/sda1 /boot/EFI
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
 
 cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
