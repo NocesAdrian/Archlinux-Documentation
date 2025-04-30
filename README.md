@@ -5,6 +5,11 @@ by: `Adrian Noces`
 
 This is a step-by-step guide to installing Arch Linux with options for both encrypted and unencrypted setups. It covers disk partitioning, LVM setup, filesystem formatting, mounting, base system installation, user creation, desktop environments, driver installation, and final system configuration.
 
+### 📌 links
+- [Encrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/encrypted%20arch.md)
+- [Unencrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/unencrypted%20arch.md)
+
+
 ## Flash iso file using `dd`
 ```txt
 sudo dd if=your.iso of=/dev/sdX bs=4M status=progress conv=fsync
@@ -15,10 +20,6 @@ sudo dd if=your.iso of=/dev/sdX bs=4M status=progress conv=fsync
 -status=progress    --print status in progress
 -conv=fsync  --makes sure everything is written right in the usb
 ```
-
-### 📌 links
-- [Encrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/encrypted%20arch.md)
-- [Unencrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/unencrypted%20arch.md)
 
 ## pacman and yay flags
 ```txt
