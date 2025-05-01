@@ -340,7 +340,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ### finals
 ```bash
-systemctl enable NetworkManager iwd dhcpcd bluetooth bluetooth.service
+systemctl enable NetworkManager iwd dhcpcd bluetooth bluetooth.service bumblebeed
+systemctl start bumblebeed
 exit
 umount -a
 reboot
