@@ -301,7 +301,7 @@ pacman -S xf86-video-amdgpu mesa vulkan-radeon libva-mesa-driver
 pacman -S xf86-video-ati -> older
 
 NVIDIA
-pacman -S bumblebee nvidia nvidia-lts nvidia-utils nvidia-settings mesa
+pacman -S bumblebee nvidia nvidia-prime nvidia-lts nvidia-utils nvidia-settings mesa
 ```
 
 ### FINISHING 
