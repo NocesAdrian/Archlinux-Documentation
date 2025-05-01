@@ -42,9 +42,9 @@ sudo systemctl enable dhcpcd@wlan0.service
 ```txt
 sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress conv=fsync
 
--if  --your iso file
--of  --your storage device e.g. USB flashdrive
--bs  --block size
+-if 								--your iso file
+-of 								--your storage device e.g. USB flashdrive
+-bs 								--block size
 -status=progress    --print status in progress
 -conv=fsync         --makes sure everything is written right in the usb
 ```
