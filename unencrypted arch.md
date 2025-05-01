@@ -199,7 +199,7 @@ sudo userdel -r adrian ->
 
 ### TOOLS INSTALLATION
 ```bash
-pacman -S base-devel dosfstools grub efibootmgr lvm2 gdisk bluez bluez-utils
+pacman -S base-devel dosfstools grub efibootmgr lvm2 gdisk bluez bluez-utils gamemode
 ```
 ### MORE
 ```bash
@@ -301,7 +301,7 @@ pacman -S xf86-video-amdgpu mesa vulkan-radeon libva-mesa-driver
 pacman -S xf86-video-ati -> older
 
 NVIDIA
-pacman -S nvidia nvidia-lts nvidia-utils nvidia-settings mesa
+pacman -S bumblebee nvidia nvidia-lts nvidia-utils nvidia-settings mesa
 ```
 
 ### FINISHING 
