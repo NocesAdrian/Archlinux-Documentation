@@ -22,6 +22,8 @@ This is a step-by-step guide to installing Arch Linux with options for both encr
 - [Encrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/encrypted%20arch.md)
 - [Unencrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/unencrypted%20arch.md)
 
+---
+
 ## Pacman and Yay flags
 ```bash
 Usage: pacman or yay [OPTIONS...] <package>...
@@ -38,6 +40,8 @@ Usage: pacman or yay [OPTIONS...] <package>...
   -Sc,  --clean-cache            Remove old/unused cache
 ```
 
+---
+
 ## Enable `yay`
 ```bash
 sudo pacman -S --needed base-devel git
@@ -45,6 +49,8 @@ sudo git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 ```
+
+---
 
 ## Useful files to configure
 ```bash
@@ -102,6 +108,8 @@ Usage: nano /Path/to/file
 
 ```
 
+---
+
 ## Unable to connect to network after booting installed arch
 ```bash
 wpa_passphrase "SSID" "PASSWD" > /etc/wpa_supplicant/wpa.conf
@@ -109,6 +117,8 @@ wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa.conf
 dhcpcd wlan0
 sudo systemctl enable dhcpcd@wlan0.service
 ```
+
+---
 
 ## Flash iso file using `dd`
 ```bash
@@ -123,6 +133,8 @@ sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress conv=fsync
 | `bs=4M`           | **Block size** – read/write 4MB at a time (faster & safer)            |
 | `status=progress` | Show real-time progress info while writing                            |
 | `conv=fsync`      | Force write buffer to disk before finishing – ensures full data write |
+
+---
 
 ## User Management
 #### user Creation
