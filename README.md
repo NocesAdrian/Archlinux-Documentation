@@ -5,6 +5,8 @@ by: `Adrian Noces`
 - [Arch Installation](#archlinux-installation-guide)
 - [pacman and yay flags](#pacman-and-yay-flags)
 - [Enable yay](#enable-yay)
+- [Wireless Network issue](#unable-to-connect-to-network-after-booting-installed-arch)
+- [Flash an iso file](#flash-iso-file-using-dd)
 
 ## ArchLinux Installation Guide
 
