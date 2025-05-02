@@ -40,6 +40,77 @@ cd yay
 makepkg -si
 ```
 
+## Useful files to configure
+```bash
+Usage: nano /Path/to/file
+
+⚙️ System Permissions & Users
+/etc/sudoers → Who can use sudo and how.
+
+/etc/passwd → All user account info.
+
+/etc/shadow → Encrypted user passwords.
+
+/etc/group → User groups and their members.
+
+/etc/login.defs → Default settings for user logins.
+
+🌐 Networking & DNS
+/etc/resolv.conf → DNS settings.
+
+/etc/hosts → Maps hostnames to IP addresses (local DNS).
+
+/etc/hostname → Your system's name on the network.
+
+/etc/network/interfaces → Manual network config (Debian-based).
+
+/etc/netplan/*.yaml → Network settings (newer Ubuntu).
+
+/etc/ssh/sshd_config → SSH server config.
+
+/etc/hosts.allow & /etc/hosts.deny → TCP wrappers for access control.
+
+🧠 System Brain & Boot
+/etc/fstab → Defines how drives mount at boot.
+
+/etc/init.d/ → Old-style startup scripts.
+
+/etc/systemd/ → Systemd service files (modern boot management).
+
+/etc/default/grub → Bootloader (GRUB) config.
+
+/boot/grub/grub.cfg → Auto-generated GRUB config.
+
+🧠🧠 Package & Service Managers
+/etc/pacman.conf → Pacman config (Arch-based distros).
+
+/etc/apt/sources.list → APT repos (Debian/Ubuntu).
+
+/etc/systemd/system/ → Custom systemd services.
+
+🧠🔐 Security & Firewalls
+/etc/ufw/ufw.conf → UFW firewall settings.
+
+/etc/fail2ban/ → Intrusion prevention settings.
+
+/etc/audit/auditd.conf → Linux audit framework.
+
+💻 Desktop & Shell
+/etc/profile → System-wide shell settings.
+
+/etc/bash.bashrc → System-wide bashrc.
+
+/etc/environment → Global environment variables.
+
+/etc/X11/xorg.conf → X11 (display server) config.
+
+🧠🕳️ Bonus: Black Hole of Power
+/proc/ → Virtual files that show real-time kernel data (like /proc/cpuinfo, /proc/meminfo).
+
+/sys/ → Kernel interface to hardware devices.
+
+```
+
 ## Unable to connect to network after booting installed arch
 ```bash
 wpa_passphrase "SSID" "PASSWD" > /etc/wpa_supplicant/wpa.conf
