@@ -2,11 +2,9 @@
 by: `Adrian Noces`
 
 ## Navigation
-[Arch Installation](#archlinux-installation-guide)
-
-[pacman and yay flags](#pacman-and-yay-flags)
-
-[Enable yay](#enable-yay)
+- [Arch Installation](#archlinux-installation-guide)
+- [pacman and yay flags](#pacman-and-yay-flags)
+- [Enable yay](#enable-yay)
 
 ## ArchLinux Installation Guide
 
