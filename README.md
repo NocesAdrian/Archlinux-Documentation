@@ -56,7 +56,7 @@ Usage: nano /Path/to/file
 
 /etc/resolv.conf → DNS settings.
 /etc/hosts → Maps hostnames to IP addresses (local DNS).
-/etc/hostname → Your system's name on the network.
+/etc/hostname → Your systems name on the network.
 /etc/network/interfaces → Manual network config (Debian-based).
 /etc/netplan/*.yaml → Network settings (newer Ubuntu).
 /etc/ssh/sshd_config → SSH server config.
