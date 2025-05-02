@@ -110,16 +110,6 @@ Usage: nano /Path/to/file
 
 ---
 
-## Unable to connect to network after booting installed arch
-```bash
-wpa_passphrase "SSID" "PASSWD" > /etc/wpa_supplicant/wpa.conf
-wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa.conf
-dhcpcd wlan0
-sudo systemctl enable dhcpcd@wlan0.service
-```
-
----
-
 ## Flash iso file using `dd`
 ```bash
 sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress conv=fsync
@@ -133,6 +123,16 @@ sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress conv=fsync
 | `bs=4M`           | **Block size** – read/write 4MB at a time (faster & safer)            |
 | `status=progress` | Show real-time progress info while writing                            |
 | `conv=fsync`      | Force write buffer to disk before finishing – ensures full data write |
+
+---
+
+## Unable to connect to network after booting installed arch
+```bash
+wpa_passphrase "SSID" "PASSWD" > /etc/wpa_supplicant/wpa.conf
+wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa.conf
+dhcpcd wlan0
+sudo systemctl enable dhcpcd@wlan0.service
+```
 
 ---
 
