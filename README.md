@@ -4,7 +4,7 @@ by: `Adrian Noces`
 A simple documentation of ArchLinux by Adrian Noces — crafted for personal learning, experimentation, and mastery of the system. This documentation serves as a personal lab notebook, capturing commands, configs, and concepts. While made for his own use, those who understand are welcome to explore, learn, and build from it.
 
 ## Navigation
-- [Arch Installation](#archlinux-installation-guide)
+- [Arch Installation Guide](#archlinux-installation-guide)
 - [pacman and yay flags](#pacman-and-yay-flags)
 - [Enable yay](#enable-yay)
 - [Wireless Network issue](#unable-to-connect-to-network-after-booting-installed-arch)
