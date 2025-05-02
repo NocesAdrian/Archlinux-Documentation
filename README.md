@@ -101,11 +101,28 @@ Usage: nano /Path/to/file
 /etc/environment → Global environment variables.
 /etc/X11/xorg.conf → X11 (display server) config.
 
+dotfiles
+~/.config
+
+~/.bashrc
+~/.zshrc
+
+~/.xinitrc
+~/.xsession
+
+~/.profile
+~/.bash_profile
+
+~/.vimrc
+~/.config/nvim/init.vim
+~/.config/nano/nanorc
+
+~/.gitconfig
+
 🧠🕳️ Bonus: Black Hole of Power
 
 /proc/ → Virtual files that show real-time kernel data (like /proc/cpuinfo, /proc/meminfo).
 /sys/ → Kernel interface to hardware devices.
-
 ```
 
 ---
