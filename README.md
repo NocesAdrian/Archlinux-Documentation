@@ -3,7 +3,7 @@ by: `Adrian Noces`
 
 A simple documentation of ArchLinux by Adrian Noces — crafted for personal learning, experimentation, and mastery of the system. This documentation serves as a personal lab notebook, capturing commands, configs, and concepts. While made for his own use, those who understand are welcome to explore, learn, and build from it.
 
-## Navigation
+#### Navigation
 - [Arch Installation Guide](#archlinux-installation-guide)
 - [User management](#user-management)
 - [pacman and yay flags](#pacman-and-yay-flags)
@@ -20,7 +20,7 @@ This is a step-by-step guide to installing Arch Linux with options for both encr
 - [Encrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/encrypted%20arch.md)
 - [Unencrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/unencrypted%20arch.md)
 
-## pacman and yay flags
+## Pacman and Yay flags
 ```bash
 Usage: pacman or yay [OPTIONS...] <package>...
 
