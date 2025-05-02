@@ -24,7 +24,7 @@ This is a step-by-step guide to installing Arch Linux with options for both encr
 ```txt
 Usage: pacman or yay [OPTIONS...] <package>...
 
-Options:
+[OPTIONS]
   -S,   --install                Install a package
   -Ss,  --search                 Search for packages in the repo
   -Qs,  --query-installed        Search installed packages
@@ -123,11 +123,48 @@ sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress conv=fsync
 | `conv=fsync`      | Force write buffer to disk before finishing – ensures full data write |
 
 ## User Management
+#### user Creation
 ```bash
 // add user only
 useradd -m -g users username
 // add super admin
-useradd -m -g sudo -G wheel adminName
+useradd -m -g users -G sudo,wheel adminName
 // add secondary admin
 useradd -m -g sudo adminName
+```
+#### user Deletion
+```bash
+// kill user processes
+sudo pkill -u username,adminName
+// delete user
+sudo userdel -r username,adminName
+```
+#### usermod
+```bash
+Usage: sudo usermod [OPTIONS] username,adminName
+
+[OPTIONS]
+-aG,  --add-user-to-group  append the user to a specified group
+Usage: sudo usermod -aG sudo <username>
+
+-L,   --lock-user
+Usage: sudo usermod -L <username>
+
+-U,   --unlock-user
+Usage: sudo usermod -U <username>
+
+-l,   --rename-user
+Usage sudo usermod -l <prevname> <newname>
+
+-d,   --remove-to-suplemmentary-group
+Usage: sudo gpasswd -d <username> <group>
+```
+#### change user or admin passwd
+```bash
+[OPTIONS]
+--change-user-passwd,  change user or admin password
+Usage: passwd <username>
+
+--change-root-password
+Usage: passwd
 ```
