@@ -53,7 +53,7 @@ sudo systemctl enable dhcpcd@wlan0.service
 sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress conv=fsync
 ```
 
-### Options Breakdown:
+#### Options Breakdown:
 | Flag              | Meaning                                                               |
 | ----------------- | --------------------------------------------------------------------- |
 | `if=`             | **Input file** – the ISO you want to burn (e.g. `if=linux.iso`)       |
