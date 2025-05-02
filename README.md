@@ -5,7 +5,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 
 ## Navigation
 - [Arch Installation Guide](#archlinux-installation-guide)
-- - 
+- - [User management](#user-management)
 - [pacman and yay flags](#pacman-and-yay-flags)
 - [Enable yay](#enable-yay)
 - [Wireless Network issue](#unable-to-connect-to-network-after-booting-installed-arch)
