@@ -142,7 +142,7 @@ sudo pkill -u username,adminName
 // delete user
 sudo userdel -r username,adminName
 ```
-#### usermod
+#### Configure a user
 ```bash
 Usage: sudo usermod [OPTIONS] username,adminName
 
