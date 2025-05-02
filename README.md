@@ -21,7 +21,7 @@ This is a step-by-step guide to installing Arch Linux with options for both encr
 - [Unencrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/unencrypted%20arch.md)
 
 ## pacman and yay flags
-```txt
+```bash
 Usage: pacman or yay [OPTIONS...] <package>...
 
 [OPTIONS]
@@ -128,11 +128,11 @@ sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress conv=fsync
 // add user only
 useradd -m -g users username
 
+// add secondary admin
+useradd -m -g users -G sudo adminName
+
 // add super admin
 useradd -m -g users -G sudo,wheel adminName
-
-// add secondary admin
-useradd -m -g sudo adminName
 ```
 #### user Deletion
 ```bash
