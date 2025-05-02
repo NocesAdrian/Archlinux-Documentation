@@ -126,16 +126,6 @@ sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress conv=fsync
 
 ---
 
-## Unable to connect to network after booting installed arch
-```bash
-wpa_passphrase "SSID" "PASSWD" > /etc/wpa_supplicant/wpa.conf
-wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa.conf
-dhcpcd wlan0
-sudo systemctl enable dhcpcd@wlan0.service
-```
-
----
-
 ## User Management
 #### user Creation
 ```bash
@@ -184,4 +174,14 @@ Usage: passwd <username>
 
 --change-root-password
 Usage: passwd
+```
+
+---
+
+## Unable to connect to network after booting installed arch
+```bash
+wpa_passphrase "SSID" "PASSWD" > /etc/wpa_supplicant/wpa.conf
+wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa.conf
+dhcpcd wlan0
+sudo systemctl enable dhcpcd@wlan0.service
 ```
