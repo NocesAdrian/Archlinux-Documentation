@@ -1,5 +1,6 @@
 # ArchLinux Documentation
 by: `Adrian Noces`
+
 A simple documentation of ArchLinux by Adrian Noces — crafted for personal learning, experimentation, and mastery of the system. This documentation serves as a personal lab notebook, capturing commands, configs, and concepts. While made for his own use, those who understand are welcome to explore, learn, and build from it.
 
 ## Navigation
