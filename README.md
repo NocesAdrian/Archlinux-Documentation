@@ -7,6 +7,7 @@ by: `Adrian Noces`
 - [Enable yay](#enable-yay)
 - [Wireless Network issue](#unable-to-connect-to-network-after-booting-installed-arch)
 - [Flash an iso file](#flash-iso-file-using-dd)
+- [Useful files to configure](#useful-files-to-configure)
 
 ## ArchLinux Installation Guide
 
