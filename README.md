@@ -5,7 +5,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 
 ## Navigation
 - [Arch Installation Guide](#archlinux-installation-guide)
- - [User management](#user-management)
+- [User management](#user-management)
 - [pacman and yay flags](#pacman-and-yay-flags)
 - [Enable yay](#enable-yay)
 - [Wireless Network issue](#unable-to-connect-to-network-after-booting-installed-arch)
@@ -121,3 +121,13 @@ sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress conv=fsync
 | `bs=4M`           | **Block size** – read/write 4MB at a time (faster & safer)            |
 | `status=progress` | Show real-time progress info while writing                            |
 | `conv=fsync`      | Force write buffer to disk before finishing – ensures full data write |
+
+## User Management
+```bash
+// add user only
+useradd -m -g users username
+// add super admin
+useradd -m -g sudo -G wheel adminName
+// add secondary admin
+useradd -m -g sudo adminName
+```
