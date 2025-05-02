@@ -42,13 +42,15 @@ sudo systemctl enable dhcpcd@wlan0.service
 ```
 
 ## Flash iso file using `dd`
-```txt
+```bash
 sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress conv=fsync
-
--if                 --your iso file
--of                 --your storage device e.g. USB flashdrive
--bs.                --block size
--status=progress    --print status in progress
--conv=fsync         --makes sure everything is written right in the usb
 ```
 
+### Options Breakdown:
+| Flag              | Meaning                                                               |
+| ----------------- | --------------------------------------------------------------------- |
+| `if=`             | **Input file** – the ISO you want to burn (e.g. `if=linux.iso`)       |
+| `of=`             | **Output file** – your target drive (e.g. `of=/dev/sdX`, like USB)    |
+| `bs=4M`           | **Block size** – read/write 4MB at a time (faster & safer)            |
+| `status=progress` | Show real-time progress info while writing                            |
+| `conv=fsync`      | Force write buffer to disk before finishing – ensures full data write |
