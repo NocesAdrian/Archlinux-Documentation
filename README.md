@@ -11,15 +11,18 @@ This is a step-by-step guide to installing Arch Linux with options for both encr
 
 ## pacman and yay flags
 ```txt
--S    --install
--Ss   --Search pkg
--Qs   --search installed pakage
--Sy   --sync db
--Syu  --system fill upgrade
--Rns  --wipe clean
--Rs   --remove and clean pakage
--R    --remove pakage
--Sc   --remove old unused cache
+Usage: pacman or yay [OPTIONS...] <package>...
+
+Options:
+  -S,   --install                Install a package
+  -Ss,  --search                 Search for packages in the repo
+  -Qs,  --query-installed        Search installed packages
+  -Sy,  --sync-db                Refresh the package database
+  -Syu, --upgrade-system         Full system upgrade
+  -R,   --remove                 Remove a package
+  -Rs,  --remove-deps            Remove a package and unused dependencies
+  -Rns, --remove-clean           Deep clean (remove config files too)
+  -Sc,  --clean-cache            Remove old/unused cache
 ```
 
 ## Enable `yay`
