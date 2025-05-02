@@ -127,8 +127,10 @@ sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress conv=fsync
 ```bash
 // add user only
 useradd -m -g users username
+
 // add super admin
 useradd -m -g users -G sudo,wheel adminName
+
 // add secondary admin
 useradd -m -g sudo adminName
 ```
@@ -136,6 +138,7 @@ useradd -m -g sudo adminName
 ```bash
 // kill user processes
 sudo pkill -u username,adminName
+
 // delete user
 sudo userdel -r username,adminName
 ```
