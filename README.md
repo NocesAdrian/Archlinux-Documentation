@@ -206,3 +206,12 @@ dhcpcd wlan0
 
 sudo systemctl enable dhcpcd@wlan0.service
 ```
+
+---
+
+## Generate Keyring
+```bash
+pacman-key --init
+pacman-key --populate archlinux
+pacman -Sy archlinux-keyring
+```
