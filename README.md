@@ -11,6 +11,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [Wireless Network issue](#unable-to-connect-to-network-after-booting-installed-arch)
 - [Flash an iso file](#flash-iso-file-using-dd)
 - [Useful files to configure](#useful-files-to-configure)
+- [Generate keyring](#generate-keyring)
 
 ---
 
