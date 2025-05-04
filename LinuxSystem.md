@@ -1,5 +1,5 @@
 ## Basic CMD
-```bash
+```txt
 NAME  
     Basic Linux Commands and Filters - Introduction to essential shell commands and text filters.
 
