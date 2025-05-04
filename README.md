@@ -13,6 +13,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [Flash an iso file](#flash-iso-file-using-dd)
 - [Useful files to configure](#useful-files-to-configure)
 - [Generate keyring](#generate-keyring)
+- [Creates a Linux command](#linux-cmd-creation)
 
 ---
 
@@ -215,4 +216,14 @@ sudo systemctl enable dhcpcd@wlan0.service
 pacman-key --init
 pacman-key --populate archlinux
 pacman -Sy archlinux-keyring
+```
+
+---
+
+## Linux CMD CREATION
+```bash
+Creates cmd with c or any
+compile it
+move it to the /usr/local/bin
+now you have working global cmd
 ```
