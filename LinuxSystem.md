@@ -80,7 +80,7 @@ COMMANDS
         SYNOPSIS:  
             touch FILE  
         DESCRIPTION:  
-            Creates a new empty file or updates an existing file's timestamp.  
+            Creates a new empty file or updates an existing files timestamp.  
         EXAMPLES:  
             touch new.txt
 
