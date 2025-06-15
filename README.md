@@ -181,7 +181,7 @@ Usage: sudo usermod -L <username>
 Usage: sudo usermod -U <username>
 
 -l,   --rename-user
-Usage sudo usermod -l <prevname> <newname>
+Usage: sudo usermod -l <prevname> <newname>
 
 -d,   --remove-to-suplemmentary-group
 Usage: sudo gpasswd -d <username> <group>
