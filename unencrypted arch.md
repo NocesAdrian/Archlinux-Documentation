@@ -65,6 +65,15 @@ fdisk /dev/sda
 | sda2     | +512M |
 | sda3     | 100%GB or just press Enter | 
 
+```bash
+p       # View current partitions
+d       # Delete a partition
+n       # Create a new one
+t       # Change type (e.g., to 83 for Linux)
+a       # Make bootable (optional)
+w       # Write changes (NO UNDO 💀)
+```
+
 ### UNENCRYPTED SETUP
 ```bash
 // physical volume
