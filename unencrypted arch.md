@@ -293,7 +293,7 @@ nano /etc/mkinitcpio.conf
 ```
 ```bash
 // Find HOOKS and append to the text "block" this -> lvm2 
-mkinitcpio -p linux && mkinitcpio -p linux-lts
+mkinitcpio -P
 ```
 
 ### bootloader systemd-boot
