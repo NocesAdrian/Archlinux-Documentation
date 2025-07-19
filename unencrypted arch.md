@@ -148,7 +148,7 @@ pacman -Sy archlinux-keyring
 
 ### INSTALL CORE SYSTEM
 ```bash
-pacstrap -i /mnt base
+pacstrap -i /mnt base linux linux-lts linux-headers linux-lts-headers linux-firmware
 ```
 
 ### GENERATE FILESYSTEM TABLE
@@ -198,11 +198,6 @@ pacman -S nano vim neovim git curl openssh sudo procps-ng fastfetch
 ### MUST HAVE
 ```bash
 pacman -S alacritty thunar firefox networkmanager unzip wireless_tools iw qbittorrent
-```
-
-### LINUX INSTALLATION
-```bash
-pacman -S linux linux-lts linux-headers linux-lts-headers linux-firmware
 ```
 
 ### DESKTOP ENVIRONMENT INSTALLATION
