@@ -298,6 +298,11 @@ nano /etc/mkinitcpio.conf
 mkinitcpio -p linux && mkinitcpio -p linux-lts
 ```
 
+### bootloader systemd-boot
+```bash
+bootctl install
+```
+
 ### Generate locale
 ```bash
 nano /etc/locale.gen
