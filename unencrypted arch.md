@@ -109,7 +109,7 @@ vgchange -ay
 ### FILESYSTEM STRUCTURE
 | partition | mount | size | format |
 |------|------|------|--------|
-| sda1 | /boot/EFI | +512M |	vfat32 |
+| sda1 | /boot | +512M |	vfat32 |
 
 | partition | lvm | mount | size | format |
 |-----------|-----|-------|------|--------|
@@ -133,9 +133,9 @@ swapon /dev/vg0/lv_swap
 mount /dev/vg0/lv_root /mnt
 
 mkdir /mnt/home
-mkdir -p /mnt/boot/EFI
+mkdir -p /mnt/boot
 
-mount /dev/sda1 /mnt/boot/EFI
+mount /dev/sda1 /mnt/boot
 mount /dev/vg0/lv_home /mnt/home
 ```
 
