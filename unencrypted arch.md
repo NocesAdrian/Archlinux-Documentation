@@ -189,15 +189,15 @@ sudo userdel -r adrian ->
 
 ### TOOLS INSTALLATION
 ```bash
-pacman -S base-devel dosfstools grub efibootmgr lvm2 gdisk bluez bluez-utils gamemode
+pacman -S base-devel arch-install-scripts dosfstools efibootmgr lvm2 gdisk bluez bluez-utils gamemode 
 ```
 ### MORE
 ```bash
-pacman -S mtools nano vim neovim git curl openssh os-prober sudo procps-ng fastfetch
+pacman -S nano vim neovim git curl openssh sudo procps-ng fastfetch
 ```
 ### MUST HAVE
 ```bash
-pacman -S alacritty dhcpcd thunar firefox iwd networkmanager unzip wireless_tools iw qbittorrent
+pacman -S alacritty thunar firefox networkmanager unzip wireless_tools iw qbittorrent
 ```
 
 ### LINUX INSTALLATION
