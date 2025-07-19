@@ -204,9 +204,6 @@ pacman -S alacritty thunar firefox networkmanager unzip iw qbittorrent
 ```bash
 // CORE
 pacman -S xorg xorg-xinit
-pacman -S tela-icon-theme papirus-icon-theme
-pacman -S qogir-gtk-theme nordic-theme arc-gtk-theme
-
 ```
 
 ```bash
