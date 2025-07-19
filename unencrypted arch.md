@@ -303,6 +303,54 @@ mkinitcpio -p linux && mkinitcpio -p linux-lts
 bootctl install
 ```
 
+```bash
+nano /boot/loader/loader.conf
+```
+```bash
+default arch
+timeout 3
+console-mode max
+editor no
+```
+
+```bash
+mkdir -p /boot/loader/entries
+nano /boot/loader/entries/arch.conf
+```
+```bash
+title   Arch Linux
+linux   /vmlinuz-linux
+initrd  /initramfs-linux.img
+options root=/dev/mapper/vg0-lv_root rw
+```
+```bash
+nano /boot/loader/entries/arch-fallback.conf
+```
+```bash
+title   Arch Linux (Fallback)
+linux   /vmlinuz-linux
+initrd  /initramfs-linux-fallback.img
+options root=/dev/mapper/vg0-lv_root rw
+```
+```bash
+nano /boot/loader/entries/arch-lts.conf
+```
+```bash
+title   Arch Linux (LTS)
+linux   /vmlinuz-linux-lts
+initrd  /initramfs-linux-lts.img
+options root=/dev/mapper/vg0-lv_root rw
+```
+
+#### systemd-boot troubleshooting
+```bash
+// show status
+bootctl status
+
+// update
+bootctl update
+```
+
 ### Generate locale
 ```bash
 nano /etc/locale.gen
