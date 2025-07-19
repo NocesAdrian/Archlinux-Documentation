@@ -82,7 +82,7 @@ pvcreate /dev/sda2
 vgcreate vg0 /dev/sda2
 
 // logical volume
-lvcreate -L 6GB vg0 -n lv_swap
+lvcreate -L 1GB vg0 -n lv_swap
 lvcreate -L 50GB vg0 -n lv_root
 lvcreate -L 250GB vg0 -n lv_home
 ```
