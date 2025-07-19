@@ -351,6 +351,15 @@ bootctl status
 bootctl update
 ```
 
+### register boot manager systemd-boot
+```bash
+// check if bootable devices
+efibootmgr
+
+// register systemd-boot
+efibootmgr --create --disk /dev/sda --part 1 --loader /EFI/systemd/systemd-bootx64.efi --label "Linux Boot Manager" --unicode
+```
+
 ### Generate locale
 ```bash
 nano /etc/locale.gen
