@@ -197,7 +197,7 @@ pacman -S nano vim neovim git openssh fastfetch
 ```
 ### MUST HAVE
 ```bash
-pacman -S alacritty thunar firefox networkmanager unzip iw qbittorrent
+pacman -S alacritty thunar firefox networkmanager unzip iw qbittorrent iwd
 ```
 
 ### DESKTOP ENVIRONMENT INSTALLATION
@@ -292,6 +292,8 @@ pacman -S bumblebee nvidia nvidia-prime nvidia-lts nvidia-utils nvidia-settings 
 ### FINISHING 
 ```bash
 nano /etc/mkinitcpio.conf
+```
+```bash
 // Find HOOKS and append to the text "block" this -> lvm2 
 mkinitcpio -p linux && mkinitcpio -p linux-lts
 ```
@@ -299,6 +301,8 @@ mkinitcpio -p linux && mkinitcpio -p linux-lts
 ### Generate locale
 ```bash
 nano /etc/locale.gen
+```
+```bash
 Uncomment #en_ph utf 8
 locale-gen
 ```
@@ -306,26 +310,15 @@ locale-gen
 ### configure /etc/sudoers file
 ```bash
 nano /etc/sudoers
+```
+```bash
 Uncomment #%sudo
 ```
 
 
-### BOOTLOADER FINAL TOUCH
-```bash
-
-mkdir /boot/EFI
-mount /dev/sda1 /boot/EFI
-
-grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
-
-cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
-grub-mkconfig -o /boot/grub/grub.cfg
-```
-
 ### finals
 ```bash
-systemctl enable NetworkManager iwd dhcpcd bluetooth bluetooth.service bumblebeed
-systemctl start bumblebeed
+systemctl enable NetworkManager iwd bluetooth bluetooth.service
 exit
 umount -a
 reboot
