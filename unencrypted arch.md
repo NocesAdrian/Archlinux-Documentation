@@ -148,7 +148,7 @@ pacman -Sy archlinux-keyring
 
 ### INSTALL CORE SYSTEM
 ```bash
-pacstrap -i /mnt base linux linux-lts linux-headers linux-lts-headers linux-firmware
+pacstrap -i /mnt base linux linux-lts linux-zen linux-headers linux-lts-headers linux-firmware
 ```
 
 ### GENERATE FILESYSTEM TABLE
@@ -305,8 +305,8 @@ bootctl install
 nano /boot/loader/loader.conf
 ```
 ```bash
-default arch
-timeout 3
+default arch-zen.conf
+timeout 10
 console-mode max
 editor no
 ```
@@ -321,6 +321,18 @@ linux   /vmlinuz-linux
 initrd  /initramfs-linux.img
 options root=/dev/mapper/vg0-lv_root rw
 ```
+
+```bash
+nano /boot/loader/entries/arch-zen.conf
+```
+```bash
+title   Arch Linux Zen Kernel
+linux   /vmlinuz-linux-zen
+initrd  /initramfs-linux-zen.img
+initrd  /initramfs-linux-zen-fallback.img
+options root=/dev/mapper/vg0-lv_root rw
+```
+
 ```bash
 nano /boot/loader/entries/arch-fallback.conf
 ```
@@ -330,6 +342,7 @@ linux   /vmlinuz-linux
 initrd  /initramfs-linux-fallback.img
 options root=/dev/mapper/vg0-lv_root rw
 ```
+
 ```bash
 nano /boot/loader/entries/arch-lts.conf
 ```
