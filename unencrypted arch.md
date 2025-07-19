@@ -197,7 +197,7 @@ pacman -S nano vim neovim git openssh fastfetch
 ```
 ### MUST HAVE
 ```bash
-pacman -S alacritty thunar firefox networkmanager unzip wireless_tools iw qbittorrent
+pacman -S alacritty thunar firefox networkmanager unzip iw qbittorrent
 ```
 
 ### DESKTOP ENVIRONMENT INSTALLATION
