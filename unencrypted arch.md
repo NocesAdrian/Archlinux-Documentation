@@ -293,8 +293,7 @@ pacman -S bumblebee nvidia nvidia-prime nvidia-lts nvidia-utils nvidia-settings 
 ```bash
 nano /etc/mkinitcpio.conf
 // Find HOOKS and append to the text "block" this -> lvm2 
-mkinitcpio -p linux
-mkinitcpio -p linux-lts
+mkinitcpio -p linux && mkinitcpio -p linux-lts
 ```
 
 ### Generate locale
