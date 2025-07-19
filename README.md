@@ -14,6 +14,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [Useful files to configure](#useful-files-to-configure)
 - [Generate keyring](#generate-keyring)
 - [Creates a Linux command](#linux-cmd-creation)
+- [icon and theme](#icon-and-theme) 
 
 ---
 
@@ -226,4 +227,12 @@ Creates cmd with c or any
 compile it
 move it to the /usr/local/bin
 now you have working global cmd
+```
+
+---
+
+## icon and theme
+```bash
+yay -S tela-icon-theme papirus-icon-theme
+yay -S qogir-gtk-theme nordic-theme arc-gtk-theme
 ```
