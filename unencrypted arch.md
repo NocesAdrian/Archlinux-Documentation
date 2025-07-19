@@ -155,8 +155,6 @@ pacstrap -i /mnt base linux linux-lts linux-headers linux-lts-headers linux-firm
 ```bash
 // generate
 genfstab -U -p /mnt >> /mnt/etc/fstab
-//add "defaults,noexec,nosuid,nodev" into /var/tmp nect to text "ext4"
-nano /mnt/etc/fstab
 // Check
 cat /mnt/etc/fstab
 // Remove if mistake 
