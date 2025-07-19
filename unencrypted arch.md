@@ -62,8 +62,7 @@ fdisk /dev/sda
 | Partition| size |
 | ---------|------|
 | sda1     | +512M |
-| sda2     | +512M |
-| sda3     | 100%GB or just press Enter | 
+| sda2     | 100%GB or just press Enter | 
 
 ```bash
 p       # View current partitions
@@ -77,17 +76,15 @@ w       # Write changes (NO UNDO 💀)
 ### UNENCRYPTED SETUP
 ```bash
 // physical volume
-pvcreate /dev/sda3
+pvcreate /dev/sda2
 
 // volume group
-vgcreate volgroup0 /dev/sda3
+vgcreate vg0 /dev/sda2
 
 // logical volume
-lvcreate -L 6GB volgroup0 -n lv_swap
-lvcreate -L 50GB volgroup0 -n lv_root
-lvcreate -L 250GB volgroup0 -n lv_home
-lvcreate -L 15GB volgroup0 -n lv_var
-lvcreate -L 5GB volgroup0 -n lv_tmp
+lvcreate -L 6GB vg0 -n lv_swap
+lvcreate -L 50GB vg0 -n lv_root
+lvcreate -L 250GB vg0 -n lv_home
 ```
 
 ### Troubleshooting
@@ -101,9 +98,6 @@ lvdisplay
 pvremove /dev/mapper/lvm
 vgremove volgroup0 
 lvremove /dev/volgroup0/lv_name
-
-// close encrypted device
-cryptsetup luksClose lvm
 ```
 
 ### ACTIVATE LVM
@@ -115,47 +109,34 @@ vgchange -ay
 ### FILESYSTEM STRUCTURE
 | partition | mount | size | format |
 |------|------|------|--------|
-| sda1 | /boot | +512M |	vfat32 |
-
-| partition | mount | size | format |
-|------|-----------|-------|--------|
-| sda2 | /boot/EFI | +512M |	ext4  |
+| sda1 | /boot/EFI | +512M |	vfat32 |
 
 | partition | lvm | mount | size | format |
 |-----------|-----|-------|------|--------|
-| sda3 |||||
+| sda2 |||||
 ||		 lvm ||||
-|||				/swap |		+6GB |		[SWAP] | 
+|||				/swap |		+1GB |		[SWAP] | 
 |||				/ |		+50GB |		ext4 |
 |||				/home |		+250GB |		ext4 |
-|||				/var |		+15GB |		ext4 |
-|||				/tmp |	+5GB |		ext4 |
 
 ### REFORMAT PARTITION
 ```bash
 mkfs.vfat -F 32 /dev/sda1
-mkfs.ext4 /dev/sda2
-mkfs.ext4 /dev/volgroup0/lv_root
-mkfs.ext4 /dev/volgroup0/lv_home
-mkfs.ext4 /dev/volgroup0/lv_var
-mkfs.ext4 /dev/volgroup0/lv_tmp
-mkswap /dev/volgroup0/lv_swap
-swapon /dev/volgroup0/lv_swap
+mkfs.ext4 /dev/vg0/lv_root
+mkfs.ext4 /dev/vg0/lv_home
+mkswap /dev/vg0/lv_swap
+swapon /dev/vg0/lv_swap
 ```
 
 ### MOUNT PARTITION
 ```bash
-mount /dev/volgroup0/lv_root /mnt
+mount /dev/vg0/lv_root /mnt
 
 mkdir /mnt/home
-mkdir /mnt/var
-mkdir /mnt/var/tmp
-mkdir /mnt/boot
+mkdir -p /mnt/boot/EFI
 
-mount /dev/sda2 /mnt/boot
-mount /dev/volgroup0/lv_home /mnt/home
-mount /dev/volgroup0/lv_var  /mnt/var
-mount /dev/volgroup0/lv_tmp  /mnt/var/tmp
+mount /dev/sda1 /mnt/boot/EFI
+mount /dev/vg0/lv_home /mnt/home
 ```
 
 ### INITIALIZED KEYRING
