@@ -286,7 +286,7 @@ lspci
 
 ```bash
 INTEL
-pacman -S xf86-video-intel mesa intel-media-driver
+pacman -S xf86-video-intel mesa intel-media-driver intel-ucode
 
 AMD
 pacman -S xf86-video-amdgpu mesa vulkan-radeon libva-mesa-driver
@@ -349,6 +349,7 @@ nano /boot/loader/entries/arch-fallback.conf
 ```bash
 title   Arch Linux (Fallback)
 linux   /vmlinuz-linux
+initrd  /intel-ucode.img
 initrd  /initramfs-linux-fallback.img
 options root=/dev/mapper/vg0-lv_root rw
 ```
