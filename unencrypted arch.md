@@ -204,7 +204,7 @@ pacman -S nano vim neovim git openssh fastfetch fish
 ```
 ### MUST HAVE
 ```bash
-pacman -S alacritty thunar firefox unzip iw qbittorrent iwd
+pacman -S alacritty thunar firefox unzip iw qbittorrent iwd dhcpcd
 ```
 
 ### DESKTOP ENVIRONMENT INSTALLATION
