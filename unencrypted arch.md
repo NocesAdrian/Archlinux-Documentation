@@ -327,6 +327,7 @@ nano /boot/loader/entries/arch.conf
 ```bash
 title   Arch Linux
 linux   /vmlinuz-linux
+initrd  /intel-ucode.img
 initrd  /initramfs-linux.img
 options root=/dev/mapper/vg0-lv_root rw
 ```
