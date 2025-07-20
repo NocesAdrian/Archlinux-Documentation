@@ -236,3 +236,19 @@ now you have working global cmd
 yay -S tela-icon-theme papirus-icon-theme whitesur-icon-theme
 yay -S qogir-gtk-theme nordic-theme arc-gtk-theme
 ```
+
+## zram-generator
+```bash
+yay -S zram-generator
+sudo mkdir -p /etc/systemd/zram-generator.conf.d
+sudo nano /etc/systemd/zram-generator.conf.d/zram.conf
+```
+```bash
+[zram0]
+zram-size = ram / 2
+compression-algorithm = zstd
+```
+```bash
+sudo systemctl daemon-reexec
+sudo systemctl restart systemd-zram-setup@zram0.service
+```
