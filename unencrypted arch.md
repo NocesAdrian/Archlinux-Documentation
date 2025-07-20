@@ -392,7 +392,7 @@ Uncomment #%sudo
 
 ### finals
 ```bash
-systemctl enable NetworkManager iwd bluetooth bluetooth.service
+systemctl enable --now iwd bluetooth bluetooth.service
 exit
 umount -a
 reboot
