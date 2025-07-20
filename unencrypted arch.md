@@ -404,7 +404,7 @@ Uncomment #%sudo
 
 ### finals
 ```bash
-systemctl enable iwd bluetooth bluetooth.service
+systemctl enable iwd bluetooth dhcpcd
 exit
 umount -a
 reboot
