@@ -233,6 +233,6 @@ now you have working global cmd
 
 ## icon and theme
 ```bash
-yay -S tela-icon-theme papirus-icon-theme
+yay -S tela-icon-theme papirus-icon-theme whitesur-icon-theme
 yay -S qogir-gtk-theme nordic-theme arc-gtk-theme
 ```
