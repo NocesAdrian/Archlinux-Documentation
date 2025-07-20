@@ -162,11 +162,11 @@ cat /mnt/etc/fstab
 rm -rf /mnt/etc/fstab
 ```
 ```bash
-# <file system>     <mount point>  <type>  <options>               <dump> <pass>
+# <file system>                   <mount point>  <type>  <options>               <dump> <pass>
 /dev/sda1.                        /boot          vfat    defaults,noatime        0      2
 /dev/mapper/vg0-lv_root           /              ext4    defaults,noatime        0      1
 /dev/mapper/vg0-lv_home           /home          ext4    defaults,noatime        0      2
-/dev/mapper/vg0-lv_swap           none           swap    sw                       0      0
+/dev/mapper/vg0-lv_swap            none           swap    sw                       0      0
  
 ```
 
