@@ -180,7 +180,7 @@ passwd
 useradd -m -g users adrian
 // add admin user
 groupadd sudo
-useradd -m -g users -G sudo,wheel admin
+useradd -m -g users -G wheel admin
 // change user password 
 passwd adrian
 // change admin passwd
