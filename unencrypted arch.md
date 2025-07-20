@@ -286,7 +286,7 @@ lspci
 
 ```bash
 INTEL
-pacman -S xf86-video-intel mesa intel-media-driver intel-ucode
+pacman -S xf86-video-intel mesa intel-media-driver intel-ucode vulkan-intel lib32-vulkan-intel
 
 AMD
 pacman -S xf86-video-amdgpu mesa vulkan-radeon libva-mesa-driver
