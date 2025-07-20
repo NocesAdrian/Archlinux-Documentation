@@ -363,7 +363,7 @@ nano /boot/loader/entries/arch-lts.conf
 title   Arch Linux (LTS)
 linux   /vmlinuz-linux-lts
 initrd  /initramfs-linux-lts.img
-options root=/dev/mapper/vg0-lv_root rw
+options root=UUID=xxxxx-xxx... rw
 ```
 
 #### systemd-boot troubleshooting
