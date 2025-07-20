@@ -331,7 +331,7 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /intel-ucode.img
 initrd  /initramfs-linux.img
-options root=/dev/mapper/vg0-lv_root rw
+options root=UUID=xxxxx-xxx... rw
 ```
 
 ```bash
@@ -342,7 +342,7 @@ title   Arch Linux Zen Kernel
 linux   /vmlinuz-linux-zen
 initrd  /initramfs-linux-zen.img
 initrd  /initramfs-linux-zen-fallback.img
-options root=/dev/mapper/vg0-lv_root rw
+options root=UUID=xxxxx-xxx... rw
 ```
 
 ```bash
@@ -353,7 +353,7 @@ title   Arch Linux (Fallback)
 linux   /vmlinuz-linux
 initrd  /intel-ucode.img
 initrd  /initramfs-linux-fallback.img
-options root=/dev/mapper/vg0-lv_root rw
+options root=UUID=xxxxx-xxx... rw
 ```
 
 ```bash
