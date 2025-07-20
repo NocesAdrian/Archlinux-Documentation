@@ -316,7 +316,7 @@ bootctl install
 nano /boot/loader/loader.conf
 ```
 ```bash
-default arch-zen.conf
+default arch
 timeout 10
 console-mode max
 editor no
