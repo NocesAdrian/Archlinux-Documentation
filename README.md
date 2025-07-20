@@ -49,7 +49,7 @@ Usage: pacman or yay [OPTIONS...] <package>...
 ## Enable `yay`
 ```bash
 sudo pacman -S --needed base-devel git
-sudo git clone https://aur.archlinux.org/yay.git
+git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 ```
