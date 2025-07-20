@@ -286,14 +286,14 @@ lspci
 
 ```bash
 INTEL
-pacman -S xf86-video-intel mesa intel-media-driver intel-ucode vulkan-intel
+pacman -S xf86-video-intel intel-media-driver intel-ucode vulkan-intel
 
 AMD
-pacman -S xf86-video-amdgpu mesa vulkan-radeon libva-mesa-driver
+pacman -S xf86-video-amdgpu vulkan-radeon libva-mesa-driver
 pacman -S xf86-video-ati -> older
 
 NVIDIA
-pacman -S bumblebee nvidia nvidia-prime nvidia-lts nvidia-utils nvidia-settings mesa
+pacman -S nvidia nvidia-prime nvidia-lts nvidia-utils nvidia-settings
 ```
 
 ### FINISHING 
