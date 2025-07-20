@@ -294,6 +294,8 @@ pacman -S xf86-video-ati -> older
 
 NVIDIA
 pacman -S nvidia nvidia-prime nvidia-lts nvidia-utils nvidia-settings
+
+pacman -S mesa
 ```
 
 ### FINISHING 
