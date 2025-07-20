@@ -15,7 +15,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [Generate keyring](#generate-keyring)
 - [Creates a Linux command](#linux-cmd-creation)
 - [icon and theme](#icon-and-theme) 
-
+- [zram-generator](#zram-generator) 
 ---
 
 ## ArchLinux Installation Guide
