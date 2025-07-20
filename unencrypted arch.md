@@ -148,6 +148,7 @@ pacman -Sy archlinux-keyring
 
 ### INSTALL CORE SYSTEM
 ```bash
+// only download base, linux, linux-headers, linux-firmware if you don't wanna think much
 pacstrap -i /mnt base linux linux-lts linux-zen linux-headers linux-lts-headers linux-firmware
 ```
 
