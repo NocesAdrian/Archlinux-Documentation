@@ -245,7 +245,7 @@ sudo nano /etc/systemd/zram-generator.conf.d/zram.conf
 ```
 ```bash
 [zram0]
-zram-size = ram / 2
+zram-size = ram / 4
 compression-algorithm = zstd
 ```
 ```bash
