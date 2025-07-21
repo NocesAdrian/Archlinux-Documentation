@@ -9,6 +9,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [Linux](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/LinuxSystem.md ) 
 - [pacman and yay flags](#pacman-and-yay-flags)
 - [Enable yay](#enable-yay)
+- [Enable sound](#enable-sound)
 - [Wireless Network issue](#unable-to-connect-to-network-after-booting-installed-arch)
 - [tells dhcpcd not to overwrite /etc/resolv.conf](#lock-dhcpcd)
 - [Flash an iso file](#flash-iso-file-using-dd)
@@ -263,4 +264,10 @@ compression-algorithm = zstd
 ```bash
 sudo systemctl daemon-reexec
 sudo systemctl restart systemd-zram-setup@zram0.service
+```
+## enable sound
+```bash
+sudo pacman -Syu pipewire pipewire-pulse pipewire-alsa wireplumber pavucontrol cava
+systemctl --user enable pipewire pipewire-pulse wireplumber
+systemctl --user start pipewire pipewire-pulse wireplumber
 ```
