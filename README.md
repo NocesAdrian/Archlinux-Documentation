@@ -10,6 +10,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [pacman and yay flags](#pacman-and-yay-flags)
 - [Enable yay](#enable-yay)
 - [Wireless Network issue](#unable-to-connect-to-network-after-booting-installed-arch)
+- [tells dhcpcd not to overwrite /etc/resolv.conf](#lock-dhcpcd)
 - [Flash an iso file](#flash-iso-file-using-dd)
 - [Useful files to configure](#useful-files-to-configure)
 - [Generate keyring](#generate-keyring)
@@ -208,6 +209,17 @@ wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa.conf
 dhcpcd wlan0
 
 sudo systemctl enable dhcpcd@wlan0.service
+```
+
+---
+
+## lock dhcpcd
+```bash
+sudo pacman -S openresolv
+sudo nano /etc/dhcpcd.conf
+```
+```bash
+nohook resolv.conf
 ```
 
 ---
