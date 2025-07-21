@@ -82,8 +82,8 @@ pvcreate /dev/sda2
 vgcreate vg0 /dev/sda2
 
 // logical volume
-lvcreate -L 4gb vg0 -n lv_swap
-lvcreate -L 200GB vg0 -n lv_root
+lvcreate -L 2gb vg0 -n lv_swap
+lvcreate -L 150GB vg0 -n lv_root
 lvcreate -l 100%FREE vg0 -n lv_home
 ```
 
@@ -115,8 +115,8 @@ vgchange -ay
 |-----------|-----|-------|------|--------|
 | sda2 |||||
 ||		 lvm ||||
-|||				/swap |		+4GB |		[SWAP] | 
-|||				/ |		+200GB |		ext4 |
+|||				/swap |		+2GB |		[SWAP] | 
+|||				/ |		+150GB |		ext4 |
 |||				/home |		+100% |		ext4 |
 
 ### REFORMAT PARTITION
