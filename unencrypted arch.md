@@ -200,7 +200,7 @@ pacman -S base-devel arch-install-scripts dosfstools efibootmgr lvm2 gdisk bluez
 ```
 ### MORE
 ```bash
-pacman -S nano vim neovim git openssh fastfetch fish
+pacman -S nano vim neovim git openssh fastfetch fish wget
 ```
 ### MUST HAVE
 ```bash
