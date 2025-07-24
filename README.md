@@ -17,7 +17,8 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [Generate keyring](#generate-keyring)
 - [Creates a Linux command](#linux-cmd-creation)
 - [icon and theme](#icon-and-theme) 
-- [zram-generator](#zram-generator) 
+- [zram-generator](#zram-generator)
+- [MarkDown CLI viewer](#md-cli-viewer)
 ---
 
 ## ArchLinux Installation Guide
@@ -270,4 +271,10 @@ sudo systemctl restart systemd-zram-setup@zram0.service
 sudo pacman -Syu pipewire pipewire-pulse pipewire-alsa wireplumber pavucontrol cava
 systemctl --user enable pipewire pipewire-pulse wireplumber
 systemctl --user start pipewire pipewire-pulse wireplumber
+```
+
+## md cli viewer
+```bash
+sudo pacman -S glow
+glow markdown.md
 ```
