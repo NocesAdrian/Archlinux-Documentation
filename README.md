@@ -19,6 +19,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [icon and theme](#icon-and-theme) 
 - [zram-generator](#zram-generator)
 - [MarkDown CLI viewer](#md-cli-viewer)
+- [Manage Printer](#printer-management)
 ---
 
 ## ArchLinux Installation Guide
@@ -277,4 +278,15 @@ systemctl --user start pipewire pipewire-pulse wireplumber
 ```bash
 sudo pacman -S glow
 glow markdown.md
+```
+
+## printer management
+```bash
+// download and enable printer manager
+sudo pacman -S cups
+sudo systemctl enable --now cups.service
+
+// install printer drivers
+yay -S epson-inkjet-printer-escpr
+yay -S epson-inkjet-printer-escpr2
 ```
