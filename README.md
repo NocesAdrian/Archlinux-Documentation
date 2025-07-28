@@ -10,7 +10,6 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [pacman and yay flags](#pacman-and-yay-flags)
 - [Enable yay](#enable-yay)
 - [Enable sound](#enable-sound)
-- [Wireless Network issue](#unable-to-connect-to-network-after-booting-installed-arch)
 - [tells dhcpcd not to overwrite /etc/resolv.conf](#lock-dhcpcd)
 - [Flash an iso file](#flash-iso-file-using-dd)
 - [Useful files to configure](#useful-files-to-configure)
