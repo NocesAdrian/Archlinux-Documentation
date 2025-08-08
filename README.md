@@ -295,21 +295,17 @@ yay -S epson-inkjet-printer-escpr2
 sudo pacman -S sway swaybg swaylock swayidle \
              xorg-xwayland xorg-xlsclients \
              grim slurp wl-clipboard foot
+
+mkdir -p ~/.config/sway
+cp /etc/sway/config ~/.config/sway/config
 ```
 Breakdown:
 
     sway – the WM itself
-
     swaybg – wallpapers
-
     swaylock – lock screen
-
     swayidle – idle handling
-
     xorg-xwayland – runs old X11 apps on Wayland
-
     grim & slurp – screenshots
-
     wl-clipboard – clipboard management
-
     foot – terminal (Wayland native, fast)
