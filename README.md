@@ -19,6 +19,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [zram-generator](#zram-generator)
 - [MarkDown CLI viewer](#md-cli-viewer)
 - [Manage Printer](#printer-management)
+- [install swaywm](#install-swaywm)
 ---
 
 ## ArchLinux Installation Guide
@@ -289,3 +290,26 @@ sudo systemctl enable --now cups.service
 yay -S epson-inkjet-printer-escpr
 yay -S epson-inkjet-printer-escpr2
 ```
+## install swaywm
+```bash
+sudo pacman -S sway swaybg swaylock swayidle \
+             xorg-xwayland xorg-xlsclients \
+             grim slurp wl-clipboard foot
+```
+Breakdown:
+
+    sway – the WM itself
+
+    swaybg – wallpapers
+
+    swaylock – lock screen
+
+    swayidle – idle handling
+
+    xorg-xwayland – runs old X11 apps on Wayland
+
+    grim & slurp – screenshots
+
+    wl-clipboard – clipboard management
+
+    foot – terminal (Wayland native, fast)
