@@ -302,6 +302,7 @@ cp /etc/sway/config ~/.config/sway/config
 Breakdown:
 
     sway – the WM itself
+    swayfx - sway but more customizable
     swaybg – wallpapers
     swaylock – lock screen
     swayidle – idle handling
