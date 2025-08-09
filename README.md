@@ -295,7 +295,7 @@ yay -S epson-inkjet-printer-escpr2
 sudo pacman -S sway swaybg swaylock swayidle \
              xorg-xwayland xorg-xlsclients \
              grim slurp wl-clipboard foot
-
+yay -S swayfx
 mkdir -p ~/.config/sway
 cp /etc/sway/config ~/.config/sway/config
 ```
