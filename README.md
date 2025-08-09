@@ -310,3 +310,17 @@ Breakdown:
     grim & slurp – screenshots
     wl-clipboard – clipboard management
     foot – terminal (Wayland native, fast)
+
+### sway login manager
+```bash
+sudo pacman -S greetd greetd-tuigreet
+sudo nano /etc/greetd/config.toml
+```
+```bash
+[default_session]
+command = "sway"
+user = "angelica"
+```
+```bash
+sudo systemctl enable greetd --now
+```
