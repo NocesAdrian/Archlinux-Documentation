@@ -61,7 +61,7 @@ fdisk /dev/sda
 
 | Partition| size |
 | ---------|------|
-| sda1     | +512M |
+| sda1     | +2GB |
 | sda2     | 100%GB or just press Enter | 
 
 ```bash
@@ -109,7 +109,7 @@ vgchange -ay
 ### FILESYSTEM STRUCTURE
 | partition | mount | size | format |
 |------|------|------|--------|
-| sda1 | /boot | +512M |	vfat32 |
+| sda1 | /boot | +2GB |	vfat32 |
 
 | partition | lvm | mount | size | format |
 |-----------|-----|-------|------|--------|
