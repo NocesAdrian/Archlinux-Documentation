@@ -334,10 +334,10 @@ Lower your brightness
 sudo nano /etc/tlp.conf
 ```
 ```bash
-// start charge when hit 40
+// start charge when hit 40%
 START_CHARGE_THRESH_BAT0=40
 
-// stop charge when hit 80
+// stop charge when hit 80%
 STOP_CHARGE_THRESH_BAT0=80  
 
 // dynamic freq
