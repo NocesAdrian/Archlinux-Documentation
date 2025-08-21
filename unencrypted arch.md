@@ -331,7 +331,7 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /intel-ucode.img
 initrd  /initramfs-linux.img
-options root=UUID=xxxxx-xxx... rw
+options root=UUID=xxxxx-xxx... rw quiet splash mem_sleep_default=deep
 ```
 
 ```bash
