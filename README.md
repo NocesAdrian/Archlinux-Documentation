@@ -324,3 +324,24 @@ user = "angelica"
 ```bash
 sudo systemctl enable greetd --now
 ```
+
+
+Low brightness
+
+sudo nano /etc/tlp.conf
+ // start charge when hit 40
+START_CHARGE_THRESH_BAT0=40 
+// stop charge when hit 80
+STOP_CHARGE_THRESH_BAT0=80  
+// dynamic freq
+CPU_SCALING_GOVERNOR_ON_BAT=schedutil 
+// turn off power surge when using battery or cpu boost
+CPU_BOOST_ON_BAT=0 
+// SSD/HDD uses less power when idle. 
+DISK_APM_LEVEL_ON_BAT="128"
+// Tiny battery savings when no audio is playing.
+SOUND_POWER_SAVE_ON_BAT=1
+// Makes sure your schedutil + boost settings are always applied automatically. 
+RESTORE_DEVICE_STATE_ON_STARTUP=1
+sudo systemctl restart tlp
+
