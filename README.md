@@ -328,7 +328,7 @@ sudo systemctl enable greetd --now
 
 ## Battery Optimization
 ```bash
-Low your brightness
+Lower your brightness
 ```
 ```bash
 sudo nano /etc/tlp.conf
