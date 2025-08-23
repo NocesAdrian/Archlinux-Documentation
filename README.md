@@ -21,7 +21,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [Manage Printer](#printer-management)
 - [install swaywm](#install-swaywm)
 - [Optimize battery life](#Battery-Optimization)
-- [Own Volume or partition](#own-partion)
+- [Own Volume or partition](#own-partition)
 ---
 
 ## ArchLinux Installation Guide
