@@ -26,7 +26,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 
 ## ArchLinux Installation Guide
 NOTE:
-I focused on - [Unencrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/unencrypted%20arch.md) to much that - [Encrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/encrypted%20arch.md) becomes so outdated but browsing on encrypted can help encrypt setup. 
+I focused on [Unencrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/unencrypted%20arch.md) to much that [Encrypted Arch Install](https://github.com/NocesAdrian/Archlinux-Documentation/blob/main/encrypted%20arch.md) becomes so outdated but browsing on encrypted can help encrypt setup. 
 
 This is a step-by-step guide to installing Arch Linux with options for both encrypted and unencrypted setups. It covers disk partitioning, LVM setup, filesystem formatting, mounting, base system installation, user creation, desktop environments, driver installation, and final system configuration.
 
