@@ -127,6 +127,14 @@ mkfs.ext4 /dev/vg0/lv_home
 mkswap /dev/vg0/lv_swap
 swapon /dev/vg0/lv_swap
 ```
+### Turn /dev/sda1 an ESP or EFI System Partition
+```bash
+sudo gdisk /dev/sda
+```
+Press `t` and enter
+Select `/dev/sda1` usually just type `1`
+Type `EF00` // ESP
+Press `w` to write and exit
 
 ### MOUNT PARTITION
 ```bash
