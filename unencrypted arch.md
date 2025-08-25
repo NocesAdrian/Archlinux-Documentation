@@ -134,8 +134,8 @@ sudo gdisk /dev/sda
 ```bash
 Press `t` and enter
 Select `/dev/sda1` usually just type `1`
-Type `EF00` // ESP
-Press `w` to write and exit
+Type `EF00` // turns your boot partition to ESP Efi System Partition
+Press `w` to write and exit and also turns your Partition Table to GPT
 ```
 
 ### MOUNT PARTITION
