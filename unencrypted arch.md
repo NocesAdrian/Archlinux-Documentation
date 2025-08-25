@@ -131,10 +131,12 @@ swapon /dev/vg0/lv_swap
 ```bash
 sudo gdisk /dev/sda
 ```
+```bash
 Press `t` and enter
 Select `/dev/sda1` usually just type `1`
 Type `EF00` // ESP
 Press `w` to write and exit
+```
 
 ### MOUNT PARTITION
 ```bash
