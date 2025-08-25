@@ -319,7 +319,7 @@ mkinitcpio -P
 
 ### bootloader systemd-boot
 ```bash
-bootctl install
+bootctl --path=/boot install
 ```
 
 ```bash
