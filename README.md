@@ -21,7 +21,8 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [Manage Printer](#printer-management)
 - [install swaywm](#install-swaywm)
 - [Optimize battery life](#Battery-Optimization)
-- [Own Volume or partition](#own-partition)
+- [Own a Volume or partition](#own-partition)
+- [BIOS Update through fwupd] (#bios-update) 
 ---
 
 ## ArchLinux Installation Guide
@@ -366,4 +367,26 @@ sudo systemctl restart tlp
 ```bash
 // owning a logical volume or partition so you can read and write on it as a normal user
 sudo chown -R adrian:users /data
+```
+
+## bios update
+Note: Warning: You must:
+```bash
+Make sure your /boot partition /dev/sda1 is an ESP EFI System Partition
+You must connect to AC
+battery should be > 50%
+Check suspend or hibernate
+Take a screenshot or note of your BIOS settings
+```
+Go on and update
+```bash
+sudo pacman -Syu fwupd or yay -Syu fwupd
+sudo systemctl enable --now fwupd.service
+// setups
+sudo fwupd refresh 
+sudo fwupd get-devices
+sudo fwupd get-updates
+// actual update the system
+sudo fwupd update
+// note that it's normal that your laptop get rebooted many times
 ```
