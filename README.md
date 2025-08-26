@@ -22,7 +22,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [install swaywm](#install-swaywm)
 - [Optimize battery life](#Battery-Optimization)
 - [Own a Volume or partition](#own-partition)
-- [BIOS Update through fwupd] (#bios-update) 
+- [BIOS Update through fwupd](#bios-update) 
 ---
 
 ## ArchLinux Installation Guide
