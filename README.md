@@ -23,7 +23,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [Optimize battery life](#Battery-Optimization)
 - [Own a Volume or partition](#own-partition)
 - [BIOS Update through fwupd](#bios-update)
-- [Basic i/o USB functions on sway](#USB-I/O)
+- [Basic i/o USB functions on sway](#usb-i/o)
 ---
 
 ## ArchLinux Installation Guide
