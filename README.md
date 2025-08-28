@@ -403,7 +403,7 @@ reload sway ctrl-shift-c
 ```
 ## Enable Sharescreen
 ```bash
-sudo pacman -S pipewire pipewire-pulse pipewire-media-session xdg-desktop-portal xdg-desktop-portal-wlr
+sudo pacman -S pipewire pipewire-pulse xdg-desktop-portal xdg-desktop-portal-wlr
 ```
 ```bash
 systemctl --user enable --now pipewire pipewire-pulse
