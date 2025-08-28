@@ -24,6 +24,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [Own a Volume or partition](#own-partition)
 - [BIOS Update through fwupd](#bios-update)
 - [Basic i/o USB functions on sway](#usb-io)
+- [enable Sharescreen on any virtual video call](#enable-sharescreen)
 ---
 
 ## ArchLinux Installation Guide
@@ -399,4 +400,16 @@ sudo fwupd update
 ```bash
 sudo pacman -S gvfs gvfs-mtp gvfs-gphoto2 mtpfs
 reload sway ctrl-shift-c
+```
+## Enable Sharescreen
+```bash
+sudo pacman -S pipewire pipewire-pulse pipewire-media-session xdg-desktop-portal xdg-desktop-portal-wlr
+```
+```bash
+systemctl --user enable --now pipewire pipewire-pulse
+systemctl --user enable --now xdg-desktop-portal xdg-desktop-portal-wlr
+```
+check
+```bash
+systemctl --user status xdg-desktop-portal-wlr
 ```
