@@ -22,7 +22,8 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [install swaywm](#install-swaywm)
 - [Optimize battery life](#Battery-Optimization)
 - [Own a Volume or partition](#own-partition)
-- [BIOS Update through fwupd](#bios-update) 
+- [BIOS Update through fwupd](#bios-update)
+- [Basic i/o USB functions on sway](#USB-I/O)
 ---
 
 ## ArchLinux Installation Guide
@@ -393,4 +394,9 @@ sudo fwupd get-updates
 // actual update the system
 sudo fwupd update
 // note that it's normal that your laptop get rebooted many times
+```
+## USB I/O
+```bash
+sudo pacman -S gvfs gvfs-mtp gvfs-gphoto2 mtpfs
+reload sway ctrl-shift-c
 ```
