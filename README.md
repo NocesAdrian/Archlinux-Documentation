@@ -416,12 +416,13 @@ systemctl --user status xdg-desktop-portal-wlr
 ```
 ## setup image viewer and video recorder
 ```bash
-sudo pacman -S feh wf-recorder
+sudo pacman -S feh wf-recorder mpv
 ```
 #### usage: 
 ```bash
-feh /image/path
-wf-recorder -f Videos/$(date).mkv
+feh path/image.png // view image
+mpv path/video.mkv // watch video
+wf-recorder -f Videos/$(date).mkv // screen record 
 ctrl-c to stop recording
 ```
 #### convert mkv to mp4
