@@ -416,14 +416,16 @@ systemctl --user status xdg-desktop-portal-wlr
 ```
 ## setup image viewer and video recorder
 ```bash
-sudo pacman -S feh wf-recorder mpv
+sudo pacman -S feh wf-recorder mpv grim
 ```
 #### usage: 
 ```bash
 feh path/image.png // view image
 mpv path/video.mkv // watch video
-wf-recorder -f Videos/$(date).mkv // screen record 
+wf-recorder -f Videos/$(date).mkv // screen record
 ctrl-c to stop recording
+
+press "prtSc" to take screenshot using grim
 ```
 #### convert mkv to mp4
 ```bash
