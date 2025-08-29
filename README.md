@@ -25,6 +25,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [BIOS Update through fwupd](#bios-update)
 - [Basic i/o USB functions on sway](#usb-io)
 - [enable Sharescreen on any virtual video call](#enable-sharescreen)
+- [CLI image viewer and video recorder](#setup-image-viewer-and-video-recorder)
 ---
 
 ## ArchLinux Installation Guide
@@ -412,4 +413,23 @@ systemctl --user enable --now xdg-desktop-portal xdg-desktop-portal-wlr
 check
 ```bash
 systemctl --user status xdg-desktop-portal-wlr
+```
+## setup image viewer and video recorder
+```bash
+sudo pacman -S feh wf-recorder
+```
+#### usage: 
+```bash
+feh /image/path
+wf-recorder -f Videos/$(date).mkv
+ctrl-c to stop recording
+```
+#### convert mkv to mp4
+```bash
+sudo pacman -S ffmpeg
+```
+```bash
+ffmpeg -i input.mkv -c copy output.mp4
+// if compatible issue on mp4 re-encode
+ffmpeg -i input.mkv -c:v libx264 -c:a aac output.mp4
 ```
