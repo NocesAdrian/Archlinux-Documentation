@@ -378,9 +378,9 @@ sudo nano /etc/intel-undervolt.conf
 ```
 ```bash
 enable yes
-undervolt 0 'CPU' -85  // its -90mV
+undervolt 0 'CPU' -85  // its -85mV
 undervolt 1 'GPU' -50     // -50mV
-undervolt 2 'CPU Cache' -85     // -50mV
+undervolt 2 'CPU Cache' -85     // -85mV
 undervolt 3 'System Agent' 0
 undervolt 4 'Analog I/O' 0
 interval 5000
