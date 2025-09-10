@@ -21,6 +21,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [Manage Printer](#printer-management)
 - [install swaywm](#install-swaywm)
 - [Optimize battery life](#Battery-Optimization)
+- [Undervolt](#undervolt-cpu-gpu)
 - [Own a Volume or partition](#own-partition)
 - [BIOS Update through fwupd](#bios-update)
 - [Basic i/o USB functions on sway](#usb-io)
@@ -368,6 +369,22 @@ RESTORE_DEVICE_STATE_ON_STARTUP=1
 ```
 ```bash
 sudo systemctl restart tlp
+```
+
+### UnderVolt cpu gpu
+```bash
+sudo pacman -Syu intel-undervolt
+sudo nano /etc/intel-undervolt.conf
+```
+```bash
+enable yes
+undervolt 0 'CPU' -90    // its -90mV
+undervolt 1 'GPU' -50     // -50mV
+undervolt 2 'CPU Cache' -90     // -50mV
+undervolt 3 'System Agent' 0
+undervolt 4 'Analog I/O' 0
+interval 5000
+daemon undervolt
 ```
 
 ## own partition
