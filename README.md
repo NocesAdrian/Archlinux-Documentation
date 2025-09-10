@@ -386,6 +386,11 @@ undervolt 4 'Analog I/O' 0
 interval 5000
 daemon undervolt
 ```
+```bash
+sudo systemctl enable --now intel-undervolt
+sudo intel-undervolt apply
+sudo intel-undervolt measure   # shows current offsets / power readings
+```
 
 ## own partition
 ```bash
