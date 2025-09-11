@@ -27,6 +27,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [Basic i/o USB functions on sway](#usb-io)
 - [enable Sharescreen on any virtual video call](#enable-sharescreen)
 - [CLI image viewer and video recorder](#setup-image-viewer-and-video-recorder)
+- [All Purpose font](#font-installation)
 ---
 
 ## ArchLinux Installation Guide
@@ -457,4 +458,10 @@ sudo pacman -S ffmpeg
 ffmpeg -i input.mkv -c copy output.mp4
 // if compatible issue on mp4 re-encode
 ffmpeg -i input.mkv -c:v libx264 -c:a aac output.mp4
+```
+
+## Font Installation
+```bash
+// all purpose
+sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 ```
