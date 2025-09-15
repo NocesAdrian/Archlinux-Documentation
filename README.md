@@ -28,6 +28,7 @@ A simple documentation of ArchLinux by Adrian Noces — crafted for personal lea
 - [enable Sharescreen on any virtual video call](#enable-sharescreen)
 - [CLI image viewer and video recorder](#setup-image-viewer-and-video-recorder)
 - [All Purpose font](#font-installation)
+- [Set up Uncomplicated firewall(UFW)](#ufw)
 ---
 
 ## ArchLinux Installation Guide
@@ -464,4 +465,15 @@ ffmpeg -i input.mkv -c:v libx264 -c:a aac output.mp4
 ```bash
 // all purpose
 sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+```
+
+### UFW
+```bash
+sudo pacman -S ufw
+sudo systemctl enable ufw
+sudo systemctl start ufw
+sudo ufw allow ssh
+sudo ufw allow 80/tcp  # web dev
+sudo ufw allow 443/tcp
+sudo ufw status verbose
 ```
